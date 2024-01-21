@@ -1,0 +1,157 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: rgb(47, 110, 157);
+	background: linear-gradient(
+		90deg,
+		rgba(47, 110, 157, 1) 0%,
+		rgba(9, 121, 105, 0.908000700280112) 35%,
+		rgba(0, 212, 255, 1) 100%
+	);
+}
+
+.calculator {
+	height: 60vh;
+	min-width: 370px;
+	max-width: 370px;
+}
+
+.display {
+	width: 100%;
+	min-height: 20%;
+	max-height: min-content;
+	background-color: rgba(29, 27, 27, 0.151);
+	-webkit-box-shadow: 0px 10px 13px -7px #000000,
+		5px 5px 15px 5px rgba(0, 0, 0, 0);
+	box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+	color: white;
+	word-break: break-all;
+	text-align: right;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 10px;
+	border-radius: 10px 10px 0 0;
+}
+
+.currentNumber {
+	font-size: 3.5rem;
+}
+
+.previousNumber {
+	color: rgb(211, 208, 208);
+	font-size: 2rem;
+}
+
+.mathSign {
+	font-size: 2.2rem;
+}
+
+.panel {
+	height: 80%;
+	background-color: rgba(29, 27, 27, 0.151);
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	gap: 2px;
+	padding: 10px;
+	border-radius: 0 0 10px 10px;
+}
+
+.panel button {
+	background-color: rgba(29, 27, 27, 0.151);
+	border: none;
+	outline: none;
+	color: white;
+	font-size: 2rem;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.panel button:hover {
+	background-color: rgba(0, 0, 0, 0.151);
+	color: rgb(0, 212, 255);
+}
+
+.panel button:active {
+	transform: scale(0.9);
+}
+
+.equals {
+	grid-column: 4 / 5;
+	grid-row: 4 / 6;
+}
+
+.calculator-history {
+	height: 60vh;
+	width: 150px;
+	margin: 0 20px;
+	background-color: rgba(29, 27, 27, 0.151);
+	padding: 10px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.history {
+	list-style: none;
+}
+
+.history-title {
+	padding-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.history-btn {
+	background-color: rgba(0, 0, 0, 0.555);
+	border-radius: 20px;
+	border: none;
+	outline: none;
+	color: white;
+	font-weight: bold;
+	font-size: 1.5rem;
+	cursor: pointer;
+	padding: 8px;
+    margin: 10px 0 2px 0;
+	display: none;
+	transition: all 0.3s ease-in-out;
+}
+
+.history-btn:hover {
+	background-color: rgba(0, 0, 0, 0.151);
+	color: rgb(0, 212, 255);
+}
+
+.history-btn.active {
+	display: block;
+}
+
+.history-btn:active {
+	transform: scale(0.9);
+}
+
+.history-item {
+	margin: 8px 0;
+	padding: 5px;
+	letter-spacing: 1px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.151);
+	font-size: 1.5rem;
+	color: rgb(211, 208, 208);
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
